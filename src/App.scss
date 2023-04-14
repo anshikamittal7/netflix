@@ -10,6 +10,7 @@ $bg: rgb(20, 20, 20);
 }
 body {
   background-color: $bg;
+  overflow-x: hidden;
 }
 .header {
   width: 98%;
@@ -34,7 +35,6 @@ body {
     width: 7%;
     padding-right: 3vmax;
 
-    // background-color: bisque;
     > svg {
       color: white;
       font-size: 1.2rem;
@@ -123,9 +123,9 @@ a {
 }
 .row {
   background-color: $bg;
-  // height: 220px;
+  // height: 350px;
   padding: 1rem 3rem;
-  // overflow-y: hidden;
+
   > h2 {
     color: white;
     font-weight: 500;
@@ -134,17 +134,18 @@ a {
   }
   > div {
     display: flex;
-    // overflow: auto;
-    // height: 250px;
+    align-items: center;
+    overflow: auto;
+    height: 280px;
   }
 }
 .card {
   margin: 0.3rem;
-  // width: 400px;
   height: 250px;
   border-radius: 0.4rem;
   cursor: pointer;
   transition: 0.5s;
+  padding-left: 3px;
   &:hover {
     transform: scale(1.1);
     // padding: 10px;
