@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+$bg: rgb(20, 20, 20);
 * {
   margin: 0%;
   padding: 0%;
@@ -7,7 +8,9 @@
     display: none;
   }
 }
-$bg: rgb(20, 20, 20);
+body {
+  background-color: $bg;
+}
 .header {
   width: 98%;
   height: 20px;
@@ -120,20 +123,23 @@ a {
 }
 .row {
   background-color: $bg;
-  height: 220px;
-  padding: 3rem;
+  // height: 220px;
+  padding: 1rem 3rem;
+  // overflow-y: hidden;
   > h2 {
     color: white;
     font-weight: 500;
     font-size: 1.5rem;
+    padding-bottom: 20px;
   }
   > div {
     display: flex;
-    overflow: auto;
+    // overflow: auto;
+    // height: 250px;
   }
 }
 .card {
-  margin: 0.2rem;
+  margin: 0.3rem;
   // width: 400px;
   height: 250px;
   border-radius: 0.4rem;
@@ -141,7 +147,10 @@ a {
   transition: 0.5s;
   &:hover {
     transform: scale(1.1);
-    padding: 10px;
+    // padding: 10px;
+  }
+  > img {
+    width: 200px;
   }
 }
 .footer {
