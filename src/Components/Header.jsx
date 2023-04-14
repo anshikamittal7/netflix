@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../Components/logo.png";
 import { Link } from "react-router-dom";
 import { GoSearch } from "react-icons/go";
-
+import { FaRegBell } from "react-icons/fa";
 const Header = () => {
   return (
     <nav className="header">
@@ -14,7 +14,10 @@ const Header = () => {
         <Link to="/new&popular">New & Popular</Link>
         <Link to="/mylist">My List</Link>
       </span>
-      <GoSearch />
+      <div>
+        <GoSearch />
+        <FaRegBell />
+      </div>
     </nav>
   );
 };

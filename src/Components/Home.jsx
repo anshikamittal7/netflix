@@ -1,6 +1,6 @@
 import React from "react";
-// import image from "../Components/poster.jpg";
-// import movie from "../Components/movie.webp";
+import { HiPlay } from "react-icons/hi";
+import { MdOutlineBookmarkAdd } from "react-icons/md";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -61,12 +61,30 @@ const Home = () => {
     topRatedData();
     nowPlayingData();
     popularData();
+    console.log(popularMovies);
   }, []);
 
   return (
     <section className="home">
-      <div className="banner" />
-      <div />
+      <div
+        className="banner"
+        style={{
+          backgroundImage: popularMovies[0]
+            ? `url(${imgUrl}${popularMovies[0].poster_path})`
+            : "$bg",
+        }}
+      >
+        {popularMovies[0] && <h1>{popularMovies[0].original_title}</h1>}
+        {popularMovies[0] && <p>{popularMovies[0].overview}</p>}
+        <div>
+          <button>
+            <HiPlay /> Play
+          </button>
+          <button>
+            My List <MdOutlineBookmarkAdd />
+          </button>
+        </div>
+      </div>
       <div>
         <Row title={"Upcoming Movies"} arr={upcomingMovies} />
         <Row title={"Top Rated Movies"} arr={topRatedMovies} />
