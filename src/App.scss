@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
-$bg: rgb(29, 39, 44);
+$bg: rgb(33, 82, 106);
 * {
   margin: 0%;
   padding: 0%;
@@ -18,7 +18,7 @@ body {
   background-color: $bg;
   display: flex;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1.2rem;
 
   > img {
     height: 4.5vh;
